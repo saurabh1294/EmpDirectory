@@ -1,0 +1,63 @@
+<div class="container">   
+    <h2>Table</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+        <th scope="col">Sr. No.</th>
+        <th scope="col">Emp ID</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Salary</th>
+        <th scope="col">Joining date</th>
+        <th scope="col">Department</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <!-- <div class="editable mt-2" contenteditable (input)="handleChange($event.target.innerHTML)" required>
+                {{employeeId}}
+                <i class="edit fa fa-edit"></i>
+            </div> -->
+            <td class="editable" >
+                <input class="tabledit-span tabledit-input form-control input-sm" 
+                value={{employeeId}} [disabled]="editable[0] ? true: null" 
+                 #empIdInput/>
+                
+                <i class="edit-icon fa fa-edit" (click)="handleChange($event, 0)"></i>
+            </td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>$67,000</td>
+            <td>20/4/1989</td>
+            <td>Sales</td>
+        </tr>
+
+        <tr>
+            <th scope="row">2</th>
+            <td class="editable" contenteditable (input)="handleChange($event)">
+                {{employeeId+1}}
+            </td>
+            <td>Saurabh</td>
+            <td>Gattani</td>
+            <td>$1,67,000</td>
+            <td>20/4/2004</td>
+            <td>IT</td>
+        </tr>
+
+        <tr>
+            <th scope="row">3</th>
+            <td class="editable" contenteditable (keypress)="handleChange($event)"
+            (blur)="formalCell($event)">
+                {{employeeId+2}}
+            </td>
+            <td>John</td>
+            <td>Wick</td>
+            <td>$97,000</td>
+            <td>20/4/1980</td>
+            <td>Strategy</td>
+        </tr>
+        
+    </tbody>
+</table>
+</div>

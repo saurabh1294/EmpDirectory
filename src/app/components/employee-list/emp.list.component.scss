@@ -1,0 +1,43 @@
+.editable {
+    text-align: left;
+    vertical-align: middle;
+    padding: 7px 10px;
+    background: #dee2e6;
+    border: 1px solid gray;
+    background-image: linear-gradient(225deg, green, green 10px, transparent 10px, transparent);
+}
+
+.edit {
+    float:right;
+    padding-top:2px;
+}
+
+.edit-icon {
+    display: table-cell;
+    // position:absolute;
+    margin:-27px 0px;
+    float:right;
+}
+
+.tabledit-span {
+    width:100px;
+}
+
+
+@media only screen and (max-width: 768px){
+    th, td {
+        display:block;
+    }
+
+    .editable {
+        text-align: left;
+        vertical-align: middle;
+        padding: 8px 10px;
+    }
+    
+    .edit {
+        float:right;
+        padding-top:5px;
+    }    
+}
+
